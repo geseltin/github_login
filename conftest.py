@@ -22,7 +22,6 @@ def credentials():
 @pytest.fixture(scope='session', autouse=True)
 def stop(request):
     def finalizer():
-        #fixture.forms.form_main.ensure_logout()
         fixture.destroy()
 
     request.addfinalizer(finalizer)
